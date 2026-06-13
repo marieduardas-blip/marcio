@@ -68,9 +68,7 @@
     </main>
 </body>
 </html>
-
-CSS
-* ⁠* {
+*
     box-sizing: border-box;
     font-family: "Space Mono", serif;
 }
@@ -313,15 +311,13 @@ main {
         font-size: 3rem;
     }
 }
-/* Corrigido: chave extra removida */
+Corrigido: chave extra removida 
 
-
-JS 
 let conta = 0
 let pessoas = 0
 let porcentagem = 0
  
-// Corrigido: declaração duplicada removida, seletor correto
+Corrigido: declaração duplicada removida, seletor correto
 const contaInput = document.querySelector("#conta")
 contaInput.addEventListener("input", receberValorConta)
  
@@ -330,8 +326,8 @@ function receberValorConta(evento) {
     calcular()
 }
  
-const pessoasInput = document.querySelector("#pessoas")
-// Corrigido: listener duplicado e sem função removido
+const pessoasInput = document.querySelector("#pessoas") 
+Corrigido: listener duplicado e sem função removido
 pessoasInput.addEventListener("input", receberQuantidadePessoas)
  
 function receberQuantidadePessoas(evento) {
@@ -351,7 +347,7 @@ function receberQuantidadePessoas(evento) {
 }
  
 const botoesGorjeta = document.querySelectorAll(".gorjeta input[type='button']")
-// Corrigido: dois listeners por botão colapsados em um só
+ Corrigido: dois listeners por botão colapsados em um só
 botoesGorjeta.forEach(botao => {
     botao.addEventListener("click", receberPorcentagemBotao)
 })
@@ -364,12 +360,12 @@ function receberPorcentagemBotao(evento) {
         }
     })
  
-    // Corrigido: valor com "%" parseado corretamente
+    Corrigido: valor com "%" parseado corretamente
     porcentagem = parseFloat(evento.target.value) / 100
     calcular()
 }
  
-// Input manual de gorjeta
+Input manual de gorjeta
 const outraGorjeta = document.querySelector("#outra")
 outraGorjeta.addEventListener("input", (evento) => {
     botoesGorjeta.forEach(b => b.classList.remove("botao-ativo"))
@@ -390,7 +386,7 @@ function calcular() {
         "R$" + totalPorPessoa.toFixed(2)
 }
  
-// Botão resetar
+ Botão resetar
 const btnResetar = document.querySelector(".resultados button")
 btnResetar.addEventListener("click", () => {
     conta = 0
